@@ -4,46 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Lab2_b_
+namespace Lab_Assingment_3
 {
-    internal abstract class Employee
-    {
-        public string Name { get; set; }
-        public abstract double CalculateSalary();
-    }
-
-    internal class FullTimeEmployee : Employee
-    {
-        public double MonthlySalary { get; set; }
-
-        public FullTimeEmployee(string name, double monthlySalary)
+        internal class Employee
         {
-            Name = name;
-            MonthlySalary = monthlySalary;
-        }
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public decimal Salary { get; set; }
 
-        public override double CalculateSalary()
-        {
-            return MonthlySalary;
+            public void DisplayDetails()
+            {
+                Console.WriteLine("Employee Details:");
+                Console.WriteLine($"Name: {Name}");
+                Console.WriteLine($"Age: {Age}");
+                Console.WriteLine($"Salary: {Salary:C}");
+            }
         }
-    }
-
-    internal class PartTimeEmployee : Employee
-    {
-        public double HourlyRate { get; set; }
-        public int HoursWorked { get; set; }
-
-        public PartTimeEmployee(string name, double hourlyRate, int hoursWorked)
-        {
-            Name = name;
-            HourlyRate = hourlyRate;
-            HoursWorked = hoursWorked;
-        }
-
-        public override double CalculateSalary()
-        {
-            return HourlyRate * HoursWorked;
-        }
-    }
 }

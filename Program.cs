@@ -1,92 +1,98 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Services;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab2_b_
+namespace Lab_Assingment_3
 {
-    internal class Program
-    {
-        static void Main(string[] args)
+        internal class Program
         {
-           // Question 1
-            Program a =new Program();
-            a.set();
-            Program b=new Program();
-            b.set();
-            a.get();
-            b.get();
-
-            //  Question 2
-            Bus bus = new Bus("Mercedes", "Sprinter", 2022, 30);
-            bus.DisplayDetails();
-            Truck truck = new Truck("Volvo", "FH", 2021, "Blue");
-             truck.DisplayDetails();
-         
-            //Question 3
-            Calculator calc = new Calculator();
-
-            Console.WriteLine("Add(int, int): " + calc.Add(2, 3));
-            Console.WriteLine("Add(int, int, int): " + calc.Add(1, 2, 3));
-            Console.WriteLine("Add(float, float): " + calc.Add(2.5f, 3.5f));
-            Console.WriteLine("Add(double, double): " + calc.Add(1.1, 2.2));
-            Console.WriteLine("Add(double, double, double): " + calc.Add(1.1, 2.2, 3.3));
-         
-            // Question 4   
-            FullTimeEmployee fte = new FullTimeEmployee("Alice", 5000);
-            PartTimeEmployee pte = new PartTimeEmployee("Bob", 20, 80);
-            Console.WriteLine($"{fte.Name} (Full-Time) Salary: {fte.CalculateSalary()}");
-            Console.WriteLine($"{pte.Name} (Part-Time) Salary: {pte.CalculateSalary()}");
-        
-            // Question 5 - Student record system demonstration
-            Student s1 = new Student();
-            Student s2 = new Student("John Doe", 101);
-            Student s3 = new Student("Jane Smith", 102, 89.5);
-
-            s1.Display();
-            s2.Display();
-            s3.Display();
-         
-            // Question 6 - Product   demonstration
-            Product validProduct = new Product
+            static void Main(string[] args)
             {
-                ProductID = 1,
-                ProductName = "Laptop",
-                Price = 1200.50,
-                Quantity = 10
-            };
-            validProduct.PrintDetails();
+            // Question 1
+              Employee emp = new Employee
+                  {
+                      Name = "Alice",
+                      Age = 30,
+                      Salary = 50000m
+                  };
+                  emp.DisplayDetails();
+                  Console.WriteLine();
 
-            Product invalidProduct = new Product
+                  //Question 2
+                  BankAccount account = new BankAccount("123456", "Alice", 1000m);
+                  account.DisplayDetails();
+                  account.Deposit(500m);
+                  account.Withdraw(200m);
+                  account.DisplayDetails();
+                  Console.ReadLine();
+
+              //Question 3
+              int[] values = { 10, 20, 30, 40, 50 };
+              double average = MathHelper.CalculateAverage(values);
+              Console.WriteLine($"Average: {average}");
+              
+            //Question 4
+           
+                int[] values = { 10, 20, 30, 40, 50 };
+                double average = MathHelper.CalculateAverage(values);
+                Console.WriteLine($"Average: {average}");
+                Logger.LogMessage("Calculated average of integer array.");
+      
+            // Question 5
+                Person person = new Person
+                {
+                FirstName = "John",
+                LastName = "Doe"
+                };
+               person.PrintFullName();
+            
+            // Question 6
+            Employee1 emp = new Employee1
             {
-                ProductID = 2,
-                ProductName = "Mouse",
-                Price = -50,      
-                Quantity = -5    
+                Name = "Bob",
+                Age = 40,
+                BaseSalary = 60000m,
+                Bonus = 5000m,
+                Deductions = 3000m
             };
-            invalidProduct.PrintDetails();
- 
-            // Question 7 - Library management system demonstration
-            Library library = new Library();
+            Console.WriteLine($"Gross Salary: {emp.CalculateGrossSalary():C}");
+            Console.WriteLine($"Net Salary: {emp.CalculateNetSalary():C}");
+            
+            // Question 7
+            Shape circle = new Circle(5); 
+            Console.WriteLine($"Circle Area: {circle.CalculateArea():F2}");
 
-            Book b1 = new Book(1, "C# Programming", "John Smith");
-            Book b2 = new Book(2, "OOP Concepts", "Jane Doe");
-            library.AddBook(b1);
-            library.AddBook(b2);
+            Shape rectangle = new Rectangle(4, 6); 
+            Console.WriteLine($"Rectangle Area: {rectangle.CalculateArea():F2}");
+            
+            // Question 8
+            Dog dog = new Dog { Name = "Buddy", Age = 3 };
+            dog.Speak();      
+            dog.Fetch();      
 
-            Member m1 = new Member(101, "Alice");
-            Member m2 = new Member(102, "Bob");
-            library.RegisterMember(m1);
-            library.RegisterMember(m2);
+            Cat cat = new Cat { Name = "Whiskers", Age = 2 };
+            cat.Speak();      
+            cat.Scratch();
+            
+            // Question 9
+            Vehicle vehicle = new Vehicle();
+            vehicle.StartEngine();   
+            vehicle.StopEngine();   
 
-            library.ShowAvailableBooks();
+            Car car = new Car();
+            car.StartEngine();       
+            car.StopEngine();        
 
-            library.LendBook(1, 101);
-            library.ShowAvailableBooks();
-            m1.DisplayInfo();
-            m2.DisplayInfo();
+            // Question 10
+            SavingsAccount savings = new SavingsAccount("SA123", 1000m, 5m); 
+            savings.DisplayDetails();
+            savings.Deposit(500m);
+            savings.ApplyInterest(6); 
+            savings.Withdraw(200m);
+            savings.DisplayDetails();
+
         }
     }
-}
+    }
