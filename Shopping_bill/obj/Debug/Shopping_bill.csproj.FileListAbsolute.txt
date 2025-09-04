@@ -1,0 +1,8 @@
+C:\Users\Amit\source\repos\Shopping_bill\bin\Debug\Shopping_bill.exe.config
+C:\Users\Amit\source\repos\Shopping_bill\bin\Debug\Shopping_bill.exe
+C:\Users\Amit\source\repos\Shopping_bill\bin\Debug\Shopping_bill.pdb
+C:\Users\Amit\source\repos\Shopping_bill\obj\Debug\Shopping_bill.csproj.AssemblyReference.cache
+C:\Users\Amit\source\repos\Shopping_bill\obj\Debug\Shopping_bill.csproj.CoreCompileInputs.cache
+C:\Users\Amit\source\repos\Shopping_bill\obj\Debug\Shopping_bill.exe
+C:\Users\Amit\source\repos\Shopping_bill\obj\Debug\Shopping_bill.pdb
+C:\Users\Amit\source\repos\Shopping_bill\obj\Debug\Shopping_bill.exe.config
